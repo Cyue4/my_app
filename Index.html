@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz App</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            text-align: center;
+            padding: 20px;
+        }
+        .quiz-container {
+            max-width: 500px;
+            margin: auto;
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        }
+        .question {
+            font-size: 1.2em;
+            margin-bottom: 10px;
+        }
+        .options button {
+            display: block;
+            width: 100%;
+            padding: 10px;
+            margin: 5px 0;
+            border: none;
+            background: #007BFF;
+            color: white;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        .options button:hover {
+            background: #0056b3;
+        }
+        .result {
+            margin-top: 10px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="quiz-container">
+        <h2>Quiz App</h2>
+        <div class="question">What is the capital of France?</div>
+        <div class="options">
+            <button onclick="checkAnswer('Paris')">Paris</button>
+            <button onclick="checkAnswer('Berlin')">Berlin</button>
+            <button onclick="checkAnswer('Madrid')">Madrid</button>
+            <button onclick="checkAnswer('Rome')">Rome</button>
+        </div>
+        <div class="result" id="result"></div>
+    </div>
+
+    <script>
+        function checkAnswer(answer) {
+            if (answer === 'Paris') {
+                document.getElementById('result').innerText = 'Correct! 🎉';
+                document.getElementById('result').style.color = 'green';
+            } else {
+                document.getElementById('result').innerText = 'Wrong! ❌ Try again.';
+                document.getElementById('result').style.color = 'red';
+            }
+        }
+    </script>
+</body>
+</html>
