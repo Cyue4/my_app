@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Quiz App</title>
+    <title>Music Bank List</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -11,61 +11,45 @@
             text-align: center;
             padding: 20px;
         }
-        .quiz-container {
-            max-width: 500px;
+        .music-container {
+            max-width: 600px;
             margin: auto;
             background: white;
             padding: 20px;
             border-radius: 8px;
             box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
         }
-        .question {
-            font-size: 1.2em;
-            margin-bottom: 10px;
+        h2 {
+            color: #333;
         }
-        .options button {
-            display: block;
-            width: 100%;
-            padding: 10px;
-            margin: 5px 0;
-            border: none;
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+        li {
             background: #007BFF;
             color: white;
+            padding: 10px;
+            margin: 5px 0;
             border-radius: 4px;
             cursor: pointer;
+            transition: background 0.3s;
         }
-        .options button:hover {
+        li:hover {
             background: #0056b3;
-        }
-        .result {
-            margin-top: 10px;
-            font-weight: bold;
         }
     </style>
 </head>
 <body>
-    <div class="quiz-container">
-        <h2>Quiz App</h2>
-        <div class="question">What is the capital of France?</div>
-        <div class="options">
-            <button onclick="checkAnswer('Paris')">Paris</button>
-            <button onclick="checkAnswer('Berlin')">Berlin</button>
-            <button onclick="checkAnswer('Madrid')">Madrid</button>
-            <button onclick="checkAnswer('Rome')">Rome</button>
-        </div>
-        <div class="result" id="result"></div>
+    <div class="music-container">
+        <h2>Music Bank List</h2>
+        <ul id="music-list">
+            <li>Song 1 - Artist A</li>
+            <li>Song 2 - Artist B</li>
+            <li>Song 3 - Artist C</li>
+            <li>Song 4 - Artist D</li>
+            <li>Song 5 - Artist E</li>
+        </ul>
     </div>
-
-    <script>
-        function checkAnswer(answer) {
-            if (answer === 'Paris') {
-                document.getElementById('result').innerText = 'Correct! 🎉';
-                document.getElementById('result').style.color = 'green';
-            } else {
-                document.getElementById('result').innerText = 'Wrong! ❌ Try again.';
-                document.getElementById('result').style.color = 'red';
-            }
-        }
-    </script>
 </body>
 </html>
